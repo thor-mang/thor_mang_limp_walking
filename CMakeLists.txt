@@ -75,9 +75,12 @@ find_package(Eigen REQUIRED)
 # )
 
 set(HEADERS
+  include/${PROJECT_NAME}/limp_walking_controller.h
 )
 
 set(SOURCES
+  src/limp_walking_controller.cpp
+  src/walking_controller.cpp
 )
 
 ###################################
