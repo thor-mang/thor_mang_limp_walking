@@ -1,0 +1,11 @@
+<library path="lib/thor_mang_limp_walking_controller">
+
+  <class name="walking_controllers/LimpWalkingController"
+         type="walking_controllers::LimpWalkingController"
+         base_class_type="controller_interface::ControllerBase">
+    <description>
+	Walking controller based on LIMP.
+    </description>
+  </class>
+
+</library>

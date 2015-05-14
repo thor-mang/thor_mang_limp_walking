@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>thor_mang_limp_walking_controller</name>
+  <version>1.0.0</version>
+  <description>Walking controller based on LIMP.</description>
+
+  <maintainer email="oehler@sim.tu-darmstadt.de">Martin Oehler</maintainer>
+  <license>GPLv3</license>
+  <!-- <url type="website">http://wiki.ros.org/thor_mang_limp_walking_controller</url> -->
+  <author email="missura@ais.uni-bonn.de">Marcell Missura</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>control_toolbox</build_depend>
+  <build_depend>controller_interface</build_depend>
+  <build_depend>controller_manager</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <run_depend>control_toolbox</run_depend>
+  <run_depend>controller_interface</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>hardware_interface</run_depend>
+  <run_depend>roscpp</run_depend>
+
+
+  <export>
+    <controller_interface plugin="${prefix}/limp_walking_controller_plugins.xml"/>
+  </export>
+</package>
