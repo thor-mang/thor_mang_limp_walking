@@ -74,15 +74,6 @@ find_package(Eigen REQUIRED)
 #   std_msgs  # Or other packages containing msgs
 # )
 
-set(HEADERS
-  include/${PROJECT_NAME}/limp_walking_controller.h
-)
-
-set(SOURCES
-  src/limp_walking_controller.cpp
-  src/walking_controller.cpp
-)
-
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -107,6 +98,14 @@ catkin_package(
 ###########
 ## Build ##
 ###########
+
+set(HEADERS
+  include/${PROJECT_NAME}/limp_walking_controller.h
+)
+
+set(SOURCES
+  src/limp_walking_controller.cpp
+)
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations

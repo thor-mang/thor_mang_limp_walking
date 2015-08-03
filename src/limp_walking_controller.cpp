@@ -1,5 +1,7 @@
 #include <thor_mang_limp_walking_controller/limp_walking_controller.h>
 
+#include <pluginlib/class_list_macros.h>
+
 namespace walking_controllers {
 
   bool LimpWalkingController::init(hardware_interface::PositionJointInterface* hw, ros::NodeHandle& root_nh, ros::NodeHandle& controller_nh) {
@@ -21,7 +23,7 @@ namespace walking_controllers {
   std::string LimpWalkingController::getHardwareInterfaceType() const {
     return "hardware_interface::PositionJointInterface";
   }
-
+#include <pluginlib/class_list_macros.h>
   bool LimpWalkingController::initRequest(hardware_interface::RobotHW* robot_hw, ros::NodeHandle& root_nh, ros::NodeHandle& controller_nh,
                            std::set<std::string>& claimed_resources) {
     // check if construction finished cleanly
@@ -65,3 +67,5 @@ namespace walking_controllers {
     return true;
   }
 }
+
+PLUGINLIB_EXPORT_CLASS(walking_controllers::LimpWalkingController, controller_interface::ControllerBase)
